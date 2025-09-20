@@ -48,9 +48,18 @@
       <h2>Contactanos</h2>
       <p>Envianos un mail a gimnasio@gmail.com con tu consulta</p>
       <form action="https://formsubmit.co/szumstein8@gmail.com" method="POST">
-        <input type="text" placeholder="Ingresa tu nombre">
-        <input type="text" placeholder="Ingresa tu mail">
-        <textarea name="" placeholder="Escribe tu mensaje"></textarea>
+        <input  name="name" type="text" placeholder="Ingresa tu nombre" required>
+        <input name="email" type="text" placeholder="Ingresa tu mail" required>
+        <textarea name="messaje" placeholder="Escribe tu mensaje" required></textarea>
+
+             <!-- Evitar spam -->
+                    <input type="text" name="_honey" style="display:none">
+                    
+                    <!-- Evitar captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+
+                    <input type="hidden" name="_next" value="https://sentio-web.vercel.app">
+
         <button type="submit" class="btn">Enviar</button>
       </form>
     </div>
